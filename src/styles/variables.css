@@ -1,0 +1,22 @@
+:root {
+  color-scheme: dark;
+  --background: #0a0d12;
+  --surface: #10151d;
+  --surface-secondary: #151c26;
+  --surface-hover: #1a2330;
+  --text-primary: #f3f6fa;
+  --text-secondary: #9ca9ba;
+  --text-muted: #718096;
+  --border: #273140;
+  --border-strong: #3a4759;
+  --accent: #67e8b5;
+  --accent-dark: #142e27;
+  --warning: #f1c75b;
+  --container-width: 1200px;
+  --navbar-height: 72px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-card: 0 16px 40px rgb(0 0 0 / 20%);
+  --transition: 180ms ease;
+}

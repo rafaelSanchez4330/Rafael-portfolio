@@ -1,0 +1,117 @@
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-block: 110px;
+  }
+
+  .hero__visual {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(calc(100% - 32px), var(--container-width));
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__menu {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 16px;
+    left: 16px;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-card);
+  }
+
+  .navbar__menu--open {
+    display: flex;
+  }
+
+  .navbar__menu a {
+    padding: 12px;
+  }
+
+  .about__content,
+  .projects-grid,
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__content p:first-child {
+    grid-row: auto;
+  }
+
+  .section-title {
+    margin-bottom: 38px;
+  }
+
+  .footer__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .case-study__body {
+    padding-bottom: 70px;
+  }
+
+  .case-study__section {
+    padding-block: 52px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero {
+    padding-block: 84px;
+  }
+
+  .hero__actions .button,
+  .contact__links .button {
+    width: 100%;
+  }
+
+  .skills-grid,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-group,
+  .project-card__content,
+  .timeline__content {
+    padding: 22px;
+  }
+
+  .timeline__item {
+    padding-left: 28px;
+  }
+
+  .architecture {
+    padding: 24px 16px;
+  }
+
+  .architecture__outlets {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .feature-list__item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
