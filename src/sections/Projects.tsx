@@ -6,9 +6,9 @@ export function Projects() {
   return (
     <section className="section container" id="projects">
       <SectionTitle
-        eyebrow="03 / Projects"
-        title="Selected engineering work."
-        description="Case studies across backend development, infrastructure, IoT and computer vision."
+        eyebrow="03 — Selected work"
+        title="One project, explored in depth."
+        description="A connected-device project spanning embedded software, networking and physical hardware."
       />
       <div className="projects-grid">
         {projects.map((project) => (

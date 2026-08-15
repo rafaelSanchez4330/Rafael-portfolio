@@ -5,37 +5,22 @@ export function Hero() {
   return (
     <section className="hero container" aria-labelledby="hero-title">
       <div className="hero__content">
-        <p className="eyebrow">{siteConfig.name}</p>
-        <h1 id="hero-title">{siteConfig.role}</h1>
-        <p className="hero__focus">{siteConfig.focus}</p>
+        <p className="hero__greeting">Hi, I&rsquo;m {siteConfig.name}.</p>
+        <h1 id="hero-title">I build reliable software systems.</h1>
         <p className="hero__intro">{siteConfig.introduction}</p>
         <div className="hero__actions">
-          <a className="button button--primary" href="#projects">
-            View Projects
+          <a className="text-link" href="#projects">
+            Explore my work <span aria-hidden="true">↓</span>
           </a>
           <ExternalLink
-            className="button button--secondary"
+            className="text-link"
             href="https://github.com/rafaelSanchez4330"
           >
-            GitHub ↗
+            GitHub <span aria-hidden="true">↗</span>
           </ExternalLink>
-          <a
-            className="button button--secondary"
-            href="/resume/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume ↗
-          </a>
         </div>
       </div>
-      <div className="hero__visual" aria-hidden="true">
-        <div className="hero__system">
-          <span>API</span>
-          <span>DB</span>
-          <span>SYS</span>
-        </div>
-      </div>
+      <p className="hero__focus">{siteConfig.focus}</p>
     </section>
   )
 }

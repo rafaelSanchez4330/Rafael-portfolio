@@ -1,117 +1,49 @@
 @media (max-width: 900px) {
-  .hero {
-    min-height: auto;
-    grid-template-columns: 1fr;
-    padding-block: 110px;
-  }
-
-  .hero__visual {
-    display: none;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .hero { min-height: auto; grid-template-columns: 1fr; padding-block: 120px 90px; }
+  .hero__focus { max-width: 420px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .skill-group:nth-child(2) { border-right: 0; }
+  .skill-group:nth-child(3) { padding-left: 0; }
+  .project-card { grid-template-columns: 1fr; }
+  .project-card__visual { min-height: 430px; }
 }
 
 @media (max-width: 760px) {
-  .container {
-    width: min(calc(100% - 32px), var(--container-width));
-  }
-
-  .navbar__toggle {
-    display: block;
-  }
-
-  .navbar__menu {
-    position: absolute;
-    top: calc(100% + 1px);
-    right: 16px;
-    left: 16px;
-    display: none;
-    align-items: stretch;
-    flex-direction: column;
-    gap: 0;
-    padding: 10px;
-    border: 1px solid var(--border);
-    border-radius: 0 0 var(--radius-md) var(--radius-md);
-    background: var(--surface);
-    box-shadow: var(--shadow-card);
-  }
-
-  .navbar__menu--open {
-    display: flex;
-  }
-
-  .navbar__menu a {
-    padding: 12px;
-  }
-
-  .about__content,
-  .projects-grid,
-  .challenge-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about__content p:first-child {
-    grid-row: auto;
-  }
-
-  .section-title {
-    margin-bottom: 38px;
-  }
-
-  .footer__inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .case-study__body {
-    padding-bottom: 70px;
-  }
-
-  .case-study__section {
-    padding-block: 52px;
-  }
+  .container { width: min(calc(100% - 36px), var(--container-width)); }
+  .navbar__toggle { display: block; }
+  .navbar__menu { position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: none; align-items: stretch; flex-direction: column; gap: 0; padding: 14px 18px 20px; border-bottom: 1px solid var(--border); background: var(--background); }
+  .navbar__menu--open { display: flex; }
+  .navbar__menu a { padding: 12px 0; }
+  .navbar__external { margin-left: 0; }
+  .hero { padding-block: 88px 72px; }
+  .section-title { display: block; }
+  .section-title .eyebrow { margin-bottom: 24px; }
+  .about__content, .education-grid { margin-left: 0; }
+  .about__content { grid-template-columns: 1fr; }
+  .about__content p:first-child { grid-row: auto; }
+  .project-card__content { padding: 38px 28px; }
+  .project-card__visual { min-height: 360px; }
+  .timeline__item { grid-template-columns: 1fr; gap: 20px; }
+  .case-study__body { padding-bottom: 80px; }
+  .case-study__section { display: block; padding-block: 58px; }
+  .case-study__section > .eyebrow { margin-bottom: 22px; }
 }
 
 @media (max-width: 540px) {
-  .hero {
-    padding-block: 84px;
-  }
-
-  .hero__actions .button,
-  .contact__links .button {
-    width: 100%;
-  }
-
-  .skills-grid,
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .skill-group,
-  .project-card__content,
-  .timeline__content {
-    padding: 22px;
-  }
-
-  .timeline__item {
-    padding-left: 28px;
-  }
-
-  .architecture {
-    padding: 24px 16px;
-  }
-
-  .architecture__outlets {
-    width: 100%;
-    gap: 5px;
-  }
-
-  .feature-list__item {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
-  }
+  h1 { font-size: clamp(3.25rem, 17vw, 5.25rem); }
+  .section { padding-block: 84px; }
+  .hero__actions, .project-card__actions { gap: 20px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-group, .skill-group:not(:first-child), .skill-group:nth-child(3) { min-height: 0; padding: 24px 0; border-right: 0; }
+  .skill-group h3 { margin-bottom: 14px; }
+  .project-card__visual { min-height: 300px; }
+  .project-card__visual-label, .project-card__visual-caption { left: 18px; }
+  .power-strip { width: 72%; padding: 21px 14px; }
+  .power-strip span { width: 40px; height: 40px; }
+  .project-card__meta { align-items: flex-start; flex-direction: column; margin-bottom: 30px; }
+  .challenge-grid { grid-template-columns: 1fr; }
+  .architecture { padding: 28px 16px; }
+  .architecture__outlets { width: 100%; gap: 5px; }
+  .contact h2 { font-size: clamp(3.2rem, 16vw, 5rem); }
+  .footer__inner { align-items: flex-start; flex-direction: column; }
 }

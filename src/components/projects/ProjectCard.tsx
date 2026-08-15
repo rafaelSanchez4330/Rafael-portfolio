@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Project } from '../../types'
 import { ExternalLink } from '../common/ExternalLink'
-import { ImageWithFallback } from '../common/ImageWithFallback'
-import { TechBadge } from '../common/TechBadge'
 
 interface ProjectCardProps {
   project: Project
@@ -11,32 +9,30 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="project-card">
-      <ImageWithFallback
-        src={project.image}
-        alt={`${project.title} preview`}
-        className="project-card__image"
-      />
+      <div className="project-card__visual" aria-hidden="true">
+        <span className="project-card__visual-label">Connected device / 01</span>
+        <div className="power-strip">
+          <span /><span /><span />
+        </div>
+        <span className="project-card__visual-caption">Pico W · Local network · GPIO</span>
+      </div>
       <div className="project-card__content">
         <div className="project-card__meta">
           <span>{project.category}</span>
-          {project.status === 'in-development' && (
-            <span className="status status--development">In Development</span>
-          )}
+          <span>Featured project</span>
         </div>
         <h3>{project.title}</h3>
         <p>{project.shortDescription}</p>
-        <div className="badge-list" aria-label="Technologies">
-          {project.technologies.slice(0, 5).map((technology) => (
-            <TechBadge key={technology}>{technology}</TechBadge>
-          ))}
-        </div>
+        <p className="project-card__technologies">
+          {project.technologies.slice(0, 5).join(' · ')}
+        </p>
         <div className="project-card__actions">
-          <Link className="button button--primary" to={`/projects/${project.slug}`}>
-            Case Study
+          <Link className="text-link" to={`/projects/${project.slug}`}>
+            Read case study <span aria-hidden="true">→</span>
           </Link>
           {project.github && (
-            <ExternalLink className="button button--secondary" href={project.github}>
-              GitHub ↗
+            <ExternalLink className="text-link" href={project.github}>
+              GitHub <span aria-hidden="true">↗</span>
             </ExternalLink>
           )}
         </div>
