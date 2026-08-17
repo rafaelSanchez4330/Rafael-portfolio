@@ -63,77 +63,9 @@ export const projects: Project[] = [
           'Handling Wi-Fi connection failures and device availability inside a local network.',
       },
     ],
-    learnings: ['TODO'],
     github:
       'https://github.com/rafaelSanchez4330/Rasperry_Pi_Pico_Power_strip',
-    image: '/images/projects/smart-power-strip/cover.webp',
-    gallery: [
-      {
-        src: '/images/projects/smart-power-strip/hardware.webp',
-        alt: 'Smart Power Strip hardware',
-      },
-      {
-        src: '/images/projects/smart-power-strip/dashboard.webp',
-        alt: 'Smart Power Strip web dashboard',
-      },
-      {
-        src: '/images/projects/smart-power-strip/wiring.webp',
-        alt: 'Smart Power Strip wiring',
-      },
-      {
-        src: '/images/projects/smart-power-strip/demo.webp',
-        alt: 'Smart Power Strip demonstration',
-      },
-    ],
     featured: true,
-  },
-  {
-    title: 'Internal Workflow Management Platform',
-    slug: 'workflow-management-platform',
-    category: 'Backend / Web Development',
-    shortDescription:
-      'Internal web platform designed to centralize workflow management and replace dependency on external task management software.',
-    overview:
-      'An internal platform focused on centralizing workflow management with a typed backend, a relational data model and a web interface.',
-    technologies: [
-      'NestJS',
-      'TypeScript',
-      'PostgreSQL',
-      'TypeORM',
-      'REST API',
-      'React',
-      'Git',
-      'Linux',
-    ],
-  },
-  {
-    title: 'OSINT Tools System',
-    slug: 'osint-tools-system',
-    category: 'Web Development / Cybersecurity',
-    shortDescription:
-      'Web platform designed to organize and manage OSINT tools through role-based access and structured information management.',
-    overview:
-      'A web platform for organizing OSINT tools with structured information management and role-based access.',
-    technologies: [
-      'Laravel',
-      'PHP',
-      'MySQL',
-      'Docker',
-      'Nginx',
-      'AWS EC2',
-      'REST API',
-    ],
-  },
-  {
-    title: 'Real-Time People Counting System',
-    slug: 'people-counting-system',
-    category: 'Computer Vision / AI',
-    shortDescription:
-      'Computer vision project focused on detecting and counting people in real time using a live camera feed.',
-    overview:
-      'A computer vision project exploring real-time people detection and counting from a live camera feed.',
-    technologies: ['Python', 'Computer Vision', 'Object Detection', 'OpenCV'],
-    status: 'in-development',
   },
 ]
 

@@ -11,7 +11,7 @@ export function Footer() {
       <div className="container footer__inner">
         <div>
           <strong>Rafael Sánchez</strong>
-          <p>© {new Date().getFullYear()} All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Built with care.</p>
         </div>
         <div className="footer__links">
           {publicLinks.map((link) => (
@@ -19,11 +19,6 @@ export function Footer() {
               {link.label}
             </ExternalLink>
           ))}
-          {!publicLinks.some((link) => link.label === 'LinkedIn') && (
-            <span title="Add your LinkedIn URL in src/data/site.ts">
-              LinkedIn · TODO
-            </span>
-          )}
         </div>
       </div>
     </footer>

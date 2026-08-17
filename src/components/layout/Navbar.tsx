@@ -2,7 +2,13 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ExternalLink } from '../common/ExternalLink'
 
-const navigation = ['About', 'Skills', 'Projects', 'Experience', 'Contact']
+const navigation = [
+  { label: 'About', section: 'about' },
+  { label: 'Expertise', section: 'skills' },
+  { label: 'Work', section: 'projects' },
+  { label: 'Experience', section: 'experience' },
+  { label: 'Contact', section: 'contact' },
+]
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -37,15 +43,15 @@ export function Navbar() {
         >
           {navigation.map((item) => (
             <a
-              key={item}
-              href={homeHref(item.toLowerCase())}
+              key={item.section}
+              href={homeHref(item.section)}
               onClick={() => setMenuOpen(false)}
             >
-              {item}
+              {item.label}
             </a>
           ))}
-          <ExternalLink href="https://github.com/rafaelSanchez4330">
-            GitHub ↗
+          <ExternalLink className="navbar__external" href="https://github.com/rafaelSanchez4330">
+            GitHub <span aria-hidden="true">↗</span>
           </ExternalLink>
         </div>
       </nav>

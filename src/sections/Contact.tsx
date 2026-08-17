@@ -4,29 +4,21 @@ import { siteConfig, socialLinks } from '../data/site'
 export function Contact() {
   return (
     <section className="section contact container" id="contact">
-      <p className="eyebrow">06 / Contact</p>
+      <p className="eyebrow">06 — Contact</p>
       <h2>{siteConfig.contactHeading}</h2>
       <p>{siteConfig.contactCopy}</p>
       <div className="contact__links">
-        {socialLinks.map((link) =>
-          link.placeholder ? (
-            <span
-              className="button button--secondary button--disabled"
-              key={link.label}
-              title={`Replace ${link.label} placeholder in src/data/site.ts`}
-            >
-              {link.label} · TODO
-            </span>
-          ) : (
+        {socialLinks
+          .filter((link) => !link.placeholder)
+          .map((link) => (
             <ExternalLink
-              className="button button--secondary"
+              className="text-link"
               href={link.href}
               key={link.label}
             >
-              {link.label} ↗
+              {link.label} <span aria-hidden="true">↗</span>
             </ExternalLink>
-          ),
-        )}
+          ))}
       </div>
     </section>
   )
